@@ -1,0 +1,37 @@
+name: Build and Zip .NET Core App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Publish app
+        run: dotnet publish -c Release -o ./publish
+
+      - name: Zip published output
+        run: Compress-Archive -Path ./publish/* -DestinationPath HelloWorld.zip
+
+      - name: Upload zip artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hello-world-zip
+          path: HelloWorld.zip
