@@ -77,15 +77,5 @@ Using PowerShell:
     - Pull or use local Docker Image
     - Run the container with port mapping
     - Explain if any parts are simulated due to time/env
+![alt text](image-2.png)
 
-📦 Final Deliverables
-+ HelloWorld/ (.NET web app, with solution and project files)
-+ WindowsServiceMonitor/ (service source)
-+ .github/workflows/ci.yml
-+ iis_deploy.ps1 and install_service.ps1 (scripts)
-+ Dockerfile (optional)
-+ README.md with:
-    - How to run everything
-    - Screenshots (if helpful)
-    - Any assumptions or decisions
-+ Zip entire folder and email it back
