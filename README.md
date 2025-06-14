@@ -24,7 +24,7 @@ Optional:
     - Meaningful commit messages
     - Code formatting (Prettier)
 
-## Step 2: IIS Deployment Script
+## Step 2: IIS Deployment Script (Done)
 Using PowerShell:
 + Create a script to:
     - Add a local group (if not exists) and user to the group
@@ -42,7 +42,7 @@ Install-WindowsFeature Web-App-Dev, Web-Http-Redirect, Web-Asp-Net45, Web-Net-Ex
 ```
 ![alt text](image.png)
 
-## Step 3: Log Status Windows Service
+## Step 3: Log Status Windows Service (Done)
 In C#:
 + Create a Windows Service app that:
     - Run every 60 seconds
@@ -57,7 +57,7 @@ WindowsServiceMonitor/
 ├── WindowsServiceMonitor.csproj
 ```
 
-## Step 4: Windows Service Deployment Script
+## Step 4: Windows Service Deployment Script (Done)
 Using PowerShell:
 + Script to:
     - Install the service (`sc create` or `New-Service`)
@@ -66,7 +66,7 @@ Using PowerShell:
     - Configure error recovery: restart after 300 seconds
 ![alt text](image-1.png)
 
-## Step 5: Docker Image (Optional)
+## Step 5: Docker Image (Optional) (Done)
 + Add Dockerfile for `HelloWorld`
 + Modify CI pipeline to:
     - Build Docker Image
