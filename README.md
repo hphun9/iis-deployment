@@ -64,6 +64,7 @@ Using PowerShell:
     - Assign to specific user
     - Set startup type to `Auto`
     - Configure error recovery: restart after 300 seconds
+![alt text](image-1.png)
 
 ## Step 5: Docker Image (Optional)
 + Add Dockerfile for `HelloWorld`
